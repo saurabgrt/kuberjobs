@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="locale"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/prod_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+
+    <!-- User type; Buyer or Seller -->
+    <Spinner
+        android:id="@+id/input_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default"
+        android:entries="@array/search_currency_arrays"
+        android:prompt="@string/search_currency_prompt"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"/>
+
+    <!-- Duration Units -->
+    <Spinner
+        android:id="@+id/input_duration_units"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default"
+        android:entries="@array/search_duration_unit_arrays"
+        android:prompt="@string/search_duration_unit_prompt"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"/>
+
+    <!-- Duration -->
+    <Spinner
+        android:id="@+id/input_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default"
+        android:entries="@array/search_duration_arrays"
+        android:prompt="@string/search_duration_prompt"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"/>
+
+    <!-- Location Label -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default">
+        <EditText android:id="@+id/input_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:hint="Your current location"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- Profession -->
+    <Spinner
+        android:id="@+id/input_search_profession"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default"
+        android:entries="@array/search_profession_arrays"
+        android:prompt="@string/search_profession_prompt"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"/>
+
+    <!-- Next Button -->
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_next"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_top"
+        android:padding="@dimen/padding_default"
+        android:text="Next"/>
+
+
+</LinearLayout>

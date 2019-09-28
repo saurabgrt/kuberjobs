@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="locale"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/prod_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/design_default_color_primary"
+            android:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_default"
+        android:stretchColumns="1">
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dip"
+                android:text="Task summary"
+                android:background="@drawable/back"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="Short description of tasks"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back"
+                android:padding="3dip"
+                android:text="Task details"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView
+                android:text="Detailed description of tasks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back"
+                android:gravity="right"
+                android:padding="3dip"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back"
+                android:padding="3dip"
+                android:text="Task images"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView
+                android:text="File path of the tasks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back"
+                android:padding="3dip"
+                android:gravity="right"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back"
+                android:padding="3dip"
+                android:text="Duration"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back"
+                android:padding="3dip"
+                android:gravity="right"
+                android:text="Duration of tasks"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back"
+                android:padding="3dip"
+                android:text="Price"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back"
+                android:padding="3dip"
+                android:text="Price agreed "
+                android:gravity="right"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back"
+                android:padding="3dip"
+                android:text="Currency"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back"
+                android:padding="3dip"
+                android:text="Local currency "
+                android:gravity="right"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+
+        <View
+            android:layout_height="2dip"
+            android:background="#FF909090" />
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginLeft="@dimen/margin_default"
+        android:text="Confirm"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_default"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/ConfirmYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes" />
+
+        <RadioButton
+            android:id="@+id/ConfirmNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No" />
+
+    </RadioGroup>
+
+    <!-- Next Button -->
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_next"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default"
+        android:padding="@dimen/padding_default"
+        android:text="Next"/>
+
+</LinearLayout>

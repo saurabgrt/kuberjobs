@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="locale"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/prod_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/design_default_color_primary"
+            android:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+
+    <!-- Back Button -->
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_back"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:padding="12dp"
+        android:text="Back"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <!--  Identification Label -->
+        <TextView
+            android:id="@+id/identification"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/back"
+            android:text="Identification" />
+
+        <!--  Verification Label -->
+        <TextView
+            android:id="@+id/verification"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/back"
+            android:text="Verification" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/additionalDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default"
+        android:text="Provide additional details"
+        android:textStyle="bold"/>
+
+    <!--  PAN enquiry Text -->
+    <TextView
+        android:id="@+id/PAN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default"
+        android:text="Do you have PAN?" />
+
+    <!-- PAN Number -->
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_default"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonPANYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPANNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No" />
+
+    </RadioGroup>
+
+    <TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <EditText
+            android:id="@+id/input_pan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:autofillHints="" />
+    </TextInputLayout>
+
+    <TextView
+        android:id="@+id/correspondenceAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default"
+        android:text="Correspondence address"
+        android:textStyle="bold"/>
+
+    <!--  Instant KYC Text -->
+    <TextView
+        android:id="@+id/correspondenceAddressText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_default"
+        android:text="My correspndence address is same as address on Aadhar card?" />
+
+    <!-- Aadhar Address Correspondence -->
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_default"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/AadharAddressYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes" />
+
+        <RadioButton
+            android:id="@+id/AadharAddressNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No" />
+
+    </RadioGroup>
+
+    <!-- Correspondence Address -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <EditText
+            android:id="@+id/input_correspondence_addres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:autofillHints="" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <!-- Submit Button -->
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_submit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top"
+        android:padding="@dimen/padding_default"
+        android:text="Submit"/>
+
+</LinearLayout>

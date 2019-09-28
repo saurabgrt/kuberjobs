@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <!-- ADD the following entries -->
+    <dimen name="padding_medium">5dp</dimen>
+    <dimen name="padding_small">3dp</dimen>
+    <dimen name="padding_default">3dp</dimen>
+    <dimen name="margin_top">24dp</dimen>
+    <dimen name="margin_bottom">24dp</dimen>
+    <dimen name="margin_left">24dp</dimen>
+    <dimen name="margin_right">24dp</dimen>
+    <dimen name="margin_default">12dp</dimen>
+</resources>
